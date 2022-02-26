@@ -1,0 +1,133 @@
+.App {
+    text-align: center;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.sideBarMenuItem {
+
+    cursor: pointer;
+
+}
+
+.sideBarMenuItem:hover {
+
+    cursor: pointer;
+    color: #6653A7;
+
+}
+
+
+.mainscreen-w {
+
+    width: 85%;
+    margin-right: 15%;
+
+}
+
+
+@media screen and (max-width: 792px) {
+
+    .mainscreen-w {
+
+        width: 100%;
+        margin-right: 0%;
+
+    }
+
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px lightgrey;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #6653A7;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #6653A7;
+}
+
+
+.myBook {
+
+    font-size: 18px;
+
+}
+
+.leaflet-container {
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+}
+
+
+.mapBox {
+
+    width: 500px;
+    height: 500px;
+
+}
+
+
+@media screen and (max-width: 800px) {
+
+    .mapBox {
+
+        width: 250px;
+        height: 400px;
+
+    }
+
+
+    .myBook {
+
+        font-size: 15px;
+
+    }
+}
+
+

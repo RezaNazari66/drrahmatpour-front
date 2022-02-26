@@ -1,0 +1,416 @@
+.athContainer {
+    background-color: #eeeeee;
+    color: #000000;
+    display: none;
+    position: sticky;
+    width: 100%;
+    bottom: 0;
+    z-index: 1000;
+    padding: 2%;
+}
+
+@media (min-width: 768px) {
+
+    .athContainer {
+        padding: 0.5%;
+        max-width: 530px;
+        margin: auto;
+        width: 75%;
+    }
+
+}
+
+@media (min-width: 1048px) {
+
+    .athContainer {
+        width: 100%;
+        position: fixed;
+        right: 0;
+    }
+
+}
+
+.athBanner {
+    display: grid;
+    grid-template-areas: 'logo content' 'install install';
+    position: relative;
+    grid-template-columns: 1fr 3fr;
+}
+
+.athCancelButton {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    position: absolute;
+    border: 0;
+    margin-right: 3px;
+    margin-top: 3px;
+    padding: 0;
+    top: 0;
+    right: 0;
+}
+
+
+.athContentCell {
+    align-items: center;
+}
+
+.athLogoCell {
+    text-align: center;
+    grid-area: logo;
+}
+
+.athTitleCell {
+    align-self: center;
+    grid-area: content;
+}
+
+.athInstallButtonCell {
+    text-align: right;
+    grid-area: install;
+}
+
+.button {
+    display: unset;
+}
+
+
+.athGuidance {
+    display: none;
+    grid-template-areas: 'cancel' 'image';
+    position: relative;
+}
+
+.athCancelButtonCell {
+    grid-area: cancel;
+    text-align: right;
+}
+
+
+.athGuidanceImageCell {
+    grid-area: image;
+    text-align: center;
+}
+
+.athGuidanceCancelButton {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    border: 0;
+}
+
+.athLogo {
+    border-radius: 30px;
+    border: 1px solid black;
+}
+
+.athTitle {
+    font-weight: bold;
+    font-size: large;
+    width: 90%;
+}
+
+.d-grid {
+    display: grid !important;
+}
+
+.button {
+    text-decoration: none;
+    border: none;
+    display: flex;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    height: 30px;
+    padding: 0 20px;
+    outline: none;
+    align-items: center;
+    background: #0000ff;
+    color: #ffffff;
+
+}
+
+
+body {
+    margin: 0;
+    font-family: "vazir" !important;
+}
+
+.alert-success {
+    background-color: #6ADC99 !important;
+}
+
+.todayBtn {
+
+    background-color: #6ADC99;
+    border-radius: 5px;
+    color: white;
+    border: none;
+
+}
+
+.nullDayBtn {
+
+    background-color: gray;
+    border-radius: 5px;
+    color: white;
+    border: none;
+
+}
+
+.TextGray {
+    color: gray;
+}
+
+.LoginMargin {
+    margin-top: 10%;
+    color: gray;
+}
+
+.scrolling-wrapper {
+    -webkit-overflow-scrolling: touch;
+    overflow-x: -moz-scrollbars-none;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.dayItem {
+
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    border-radius: 15px;
+
+}
+
+.card {
+    display: inline-block !important;
+
+}
+
+.card2 {
+    display: inline-block !important;
+    border: none;
+    width: 10%;
+    height: 35% !important;
+    background-color: #eeeeee;
+}
+
+
+.card3 {
+    display: inline-block !important;
+    border: none;
+}
+
+.Title {
+    padding-top: 4em;
+    text-align: center;
+}
+
+.Inputs {
+    border-radius: 2em !important;
+}
+
+.buttonGreen {
+    background-color: #6ADC99 !important;
+    color: white !important;
+}
+
+.Font-16 {
+    font-size: 18px;
+}
+
+.BannerImage {
+
+    height: 200px;
+    width: 300px;
+
+}
+
+.BannerPattern {
+    height: 200px;
+    width: auto;
+    border-radius: 1em;
+    background-image: url("banner_pattern.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.BannerPattern h5 {
+    padding-top: 50px;
+    color: white;
+}
+
+.HomeButtons {
+    border-radius: 1em;
+}
+
+.HomeButtons div {
+    background: url(components/images/circle_pattern.svg) no-repeat center;
+}
+
+.BookCategoriesImage {
+    width: 300px;
+    height: 300px;
+    border-radius: 1em;
+}
+
+.ClinicCall {
+    background-color: #6653A7;
+    border-radius: 2em;
+}
+
+.HorizontalScroll {
+    height: 175px;
+    background-color: #6ADC99;
+}
+
+.IndexHeader {
+    height: 80px;
+    font-size: 24px;
+    margin-top: env(safe-area-inset-top);
+    font-family: vazir !important;
+    background-color: #eee;
+}
+
+.SideBarHeader {
+    height: 80px;
+    background-image: url("group.svg");
+    background-color: #6ADC99;
+}
+
+
+.LoginHeader {
+    height: 100px;
+    background-image: url("group.svg");
+    border-bottom-left-radius: 3em;
+}
+
+.LoginHeaderBottom {
+    height: 100px;
+    background-image: url("group.svg");
+    margin-top: 12%;
+}
+
+.LoadingBackground {
+    padding-left: 20%;
+    position: center;
+    width: 100vw !important;
+    height: 100vh !important;
+    line-height: 100vh;
+    background-color: #fff !important;
+}
+
+.LoadingBackgroundAuth {
+    padding-left: 20%;
+    position: center;
+    width: 100vw !important;
+    height: 100vh !important;
+    line-height: 100vh;
+    background-color: #fff !important;
+}
+
+
+.Loading {
+
+    position: center;
+
+}
+
+.ResiveHeaderBottom {
+    height: 100px;
+    background-image: url("group.svg");
+    margin-top: 1%;
+}
+
+.HeaderGrayBackground {
+    height: 50%;
+    background-color: #F8F8F8;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+.text-purple {
+
+    color: #6653A7;
+    font-weight: bold;
+    font-family: 'vazir';
+
+}
+
+@media screen and (max-width: 790px) {
+
+    .card2 {
+        display: inline-block !important;
+        border: none;
+        width: 25%;
+        height: 35% !important;
+    }
+
+
+    .scrolling-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+
+    .BannerImages {
+        height: 150px;
+        width: 300px;
+    }
+
+    .LoginMargin {
+        margin-top: 40%;
+    }
+
+    .LoginHeaderBottom {
+        height: 100px;
+        background-image: url("group.svg");
+        margin-top: 65%;
+    }
+
+    .ResiveHeaderBottom {
+        height: 100px;
+        background-image: url("group.svg");
+        margin-top: 20%;
+    }
+
+    .IndexHeader {
+        height: 80px;
+        font-family: vazir !important;
+        background-image: url("group.svg");
+        background-color: #6ADC99;
+        margin-top: env(safe-area-inset-top);
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .IndexMainLayout {
+        border-top-left-radius: 1em;
+        border-top-right-radius: 1em;
+        transform: translate(0, -10px);
+        background-color: white;
+    }
+
+    .BookCategoriesImage {
+        width: 160px;
+        height: 170px;
+        border-radius: 1em;
+    }
+
+    .BannerPattern {
+        height: 160px;
+        width: auto;
+        border-radius: 1em;
+        background-image: url("banner_pattern.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+}
+
+
+
+
+
