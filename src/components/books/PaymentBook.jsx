@@ -18,27 +18,47 @@ const PaymentBook = ({history}) => {
     const hasOnlinePayment = localStorage.getItem("hasOnlinePayment");
     const hasOfflinePayment = localStorage.getItem("hasOfflinePayment");
     const [hasOfflinePaymentSelected, setHasOfflinePaymentSelected] = useState(false);
-
+    // let selectedItem = hasOnlinePayment ==='true'? 1: 2
     if (token === '') {
         history.replace('/')
     }
 
+    // const getBackgroundColor = (id) =>{
+    //     if(id === selectedItem) return "#6653A7" 
+    //     else return "fff"
+    // }
 
+    // const getTextColor = (id) =>{
+    //     if(id === selectedItem) return  "fff"
+    //     else return "#000"
+    // }
     const setPaymentMethod = (id) => {
+        // selectedItem = id
+        if (id === 1 && document.getElementById("1") != null) {
+            if(document.getElementById("1") != null){
+            document.getElementById("1").style.backgroundColor = "#6653A7";
+            document.getElementById("1").style.color = "#fff";
+            }
+            if(document.getElementById("2") != null){
 
-        if (id === 1) {
-            document.getElementById(id).style.backgroundColor = "#6653A7";
-            document.getElementById(id).style.color = "#fff";
             document.getElementById("2").style.backgroundColor = "#fff";
             document.getElementById("2").style.color = "#000";
+            }
             localStorage.setItem("payment_method", id);
+        
             setHasOfflinePaymentSelected(true);
 
         } else if (id === 2) {
+
+            if(document.getElementById("1") != null){
             document.getElementById("1").style.backgroundColor = "#fff";
             document.getElementById("1").style.color = "#000";
-            document.getElementById(id).style.backgroundColor = "#6653A7";
-            document.getElementById(id).style.color = "#fff";
+            }
+            if(document.getElementById("2") != null){
+                document.getElementById("2").style.backgroundColor = "#6653A7";
+                document.getElementById("2").style.color = "#fff";
+            }
+
             localStorage.setItem("payment_method", id);
             setHasOfflinePaymentSelected(false);
         }
@@ -53,7 +73,13 @@ const PaymentBook = ({history}) => {
             setPaymentMethod(2)
         }
 
+        if(hasOfflinePayment ==='false' && hasOnlinePayment ==='true'){
+            setPaymentMethod(1)
+        }
 
+        if(hasOfflinePayment ==='true' && hasOnlinePayment ==='false'){
+            setPaymentMethod(2)
+        }
     });
 
     const submitVisitRequest = () => {
@@ -170,7 +196,9 @@ const PaymentBook = ({history}) => {
 
                             <div className="row">
 
-                                {hasOnlinePayment ? (<div className="col-5 mx-auto shadow pt-4 HomeButtons" id="1"
+                                {hasOnlinePayment === 'true' ? (<div className="col-5 mx-auto shadow pt-4 HomeButtons"
+                                //   style={{backgroundColor: getBackgroundColor(1), color: getTextColor(1) }} 
+                                  id="1"
                                                           onClick={() => setPaymentMethod(1)}>
                                     <div className="py-4 rounded">
                                         <img className="d-block mx-auto py-3" src={online} alt=""/>
@@ -180,7 +208,8 @@ const PaymentBook = ({history}) => {
                                     </p>
                                 </div>) : null}
 
-                                {hasOfflinePayment ? (<div className="col-5 mx-auto shadow pt-4 HomeButtons" id="2"
+                                {hasOfflinePayment === 'true' ? (<div className="col-5 mx-auto shadow pt-4 HomeButtons" id="2"
+                                                                //   style={{backgroundColor: getBackgroundColor(2), color: getTextColor(2)}}
                                                            onClick={() => setPaymentMethod(2)}>
                                     <div className="py-4 rounded">
                                         <img className="d-block mx-auto py-3" src={chash} alt=""/>
@@ -189,7 +218,6 @@ const PaymentBook = ({history}) => {
                                         پرداخت در هنگام مراجعه
                                     </p>
                                 </div>) : null}
-
                             </div>
 
                             {hasOfflinePaymentSelected ? (

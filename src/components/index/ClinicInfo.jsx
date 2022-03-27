@@ -114,6 +114,7 @@ const ClinicInfo = ({history}) => {
                                     {/*</GoogleMapReact>*/}
                                     <Mapir
                                         className={'w-100 h-100'}
+                                        center={[53.07054, 36.56132]}
                                         Map={Map}
                                            zoom={[15]}>
                                         <Mapir.Layer
