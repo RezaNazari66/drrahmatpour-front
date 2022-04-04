@@ -17,8 +17,7 @@ const PaymentBook = ({history}) => {
     const token = localStorage.getItem("token")
     const hasOnlinePayment = localStorage.getItem("hasOnlinePayment");
     const hasOfflinePayment = localStorage.getItem("hasOfflinePayment");
-    const [hasOfflinePaymentSelected, setHasOfflinePaymentSelected] = useState(false);
-    // let selectedItem = hasOnlinePayment ==='true'? 1: 2
+    const [hasOfflinePaymentSelected, setHasOfflinePaymentSelected] = useState(true);
     if (token === '') {
         history.replace('/')
     }
@@ -68,18 +67,19 @@ const PaymentBook = ({history}) => {
 
     useEffect(() => {
 
+        setPaymentMethod(1)
 
         if (hasOfflinePaymentSelected === false) {
             setPaymentMethod(2)
         }
 
-        if(hasOfflinePayment ==='false' && hasOnlinePayment ==='true'){
-            setPaymentMethod(1)
-        }
+        // if(hasOfflinePayment ==='false' && hasOnlinePayment ==='true'){
+        //     setPaymentMethod(1)
+        // }
 
-        if(hasOfflinePayment ==='true' && hasOnlinePayment ==='false'){
-            setPaymentMethod(2)
-        }
+        // if(hasOfflinePayment ==='true' && hasOnlinePayment ==='false'){
+        //     setPaymentMethod(2)
+        // }
     });
 
     const submitVisitRequest = () => {
@@ -150,7 +150,7 @@ const PaymentBook = ({history}) => {
                         history.replace('/')
                     } else if (ex.response) {
                         toast.error(ex.response.data.message.error)
-                        // console.log(ex.response.data.message.error)
+                        console.log(ex.response.data.message.error)
                         // addToast(ex.response.data.message.error, {
                         //     appearance: 'error',
                         //     autoDismiss: true,
